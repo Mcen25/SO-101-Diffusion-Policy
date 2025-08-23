@@ -1,0 +1,17 @@
+# SO Arm 101 with LeRobot Requirements
+lerobot
+torch>=2.0.0
+torchvision
+numpy
+opencv-python
+matplotlib
+hydra-core
+wandb
+gymnasium
+pynput
+pyrealsense2
+scipy
+scikit-learn
+tensorboard
+tqdm
+pillow

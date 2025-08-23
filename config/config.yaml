@@ -1,0 +1,44 @@
+# SO Arm 101 Configuration
+defaults:
+  - robot: so_arm_101
+  - policy: diffusion
+  - _self_
+
+# Environment settings
+env:
+  fps: 30
+  episode_length: 1000
+  
+# Robot configuration
+robot:
+  name: "so_arm_101"
+  port: "/dev/ttyUSB0"  # Adjust based on your setup
+  baudrate: 1000000
+  
+# Camera configuration
+camera:
+  fps: 30
+  width: 640
+  height: 480
+  device_id: 0  # USB camera device ID
+
+# Policy configuration
+policy:
+  name: "diffusion_policy"
+  horizon: 16
+  n_obs_steps: 2
+  n_action_steps: 8
+  
+# Training configuration
+training:
+  batch_size: 64
+  learning_rate: 1e-4
+  num_epochs: 2000
+  save_freq: 100
+  device: "cuda"  # or "cpu"
+  
+# Data collection
+data_collection:
+  dataset_name: "so_arm_101_demo"
+  num_episodes: 50
+  save_dir: "./data"
