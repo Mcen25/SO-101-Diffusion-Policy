@@ -194,14 +194,59 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
-#  refer to https://docs.cursor.com/context/ignore-files
-.cursorignore
-.cursorindexingignore
-
 # Marimo
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# LeRobot specific
+# Dataset files
+data/
+datasets/
+*.hdf5
+*.zarr
+*.npz
+*.pkl
+*.pickle
+
+# Model checkpoints and weights
+checkpoints/
+models/
+weights/
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+
+# Logs and tensorboard
+logs/
+runs/
+tensorboard_logs/
+wandb/
+.wandb/
+
+# Video and image files
+*.mp4
+*.avi
+*.mov
+*.gif
+*.jpg
+*.jpeg
+*.png
+*.webm
+
+# Robot-specific
+robot_configs/
+calibration/
+trajectories/
+episodes/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Hardware-specific
+/dev/
+*.bag
+*.rosbag
